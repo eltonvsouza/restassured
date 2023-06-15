@@ -24,9 +24,6 @@ public class HttpClient {
     private RequestSpecification request;
     private Response response;
     private ValidatableResponse json;
-    public final String ENDPOINT_MOVIE = "/movie";
-    public final String ENDPOINT_BOOK = "/book";
-    public final String ENDPOINT_INVALID = "/invalid";
 
 //    @Before
     public void init() {
@@ -75,6 +72,7 @@ public class HttpClient {
     }
 
     public void callEndpoint(String endpoint) {
+        System.out.println("ENDPOINT: " + endpoint);
         response = null;
         response = request.when().get(SERVER_URL + endpoint);
         System.out.println(response.getBody().asString());

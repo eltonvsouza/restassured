@@ -10,11 +10,11 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ContextConfiguration;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
-//        features = "src/test/resources",
-//        plugin = {"pretty", "html:target/cucumber/bagbasics"},
-//        glue = "org/example/steps",
-//        extraGlue = "org/example/config"
-)
+//@CucumberOptions(
+////        features = "src/test/resources",
+////        plugin = {"pretty", "html:target/cucumber/bagbasics"},
+////        glue = "org/example/steps",
+////        extraGlue = "org/example/config"
+//)
 public class CucumberIntegrationTest {
 }
