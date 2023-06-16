@@ -5,17 +5,20 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.spring.CucumberContextConfiguration;
-import org.example.config.HttpClient;
+import org.example.util.HttpClient;
 import org.junit.Assert;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.hamcrest.Matchers.*;
 
 @CucumberContextConfiguration
-public class MovieSteps {
+@SpringBootTest
+public class HttpClientSteps {
 
-    //    @Autowired(required = true)
-//    private HttpClient httpClient;
-    private final HttpClient httpClient = new HttpClient();
+    @Autowired
+    private HttpClient httpClient;
+//    private final HttpClient httpClient = new HttpClient();
 
     @Given("user call endpoint without auth")
     public void userCallEndpointWithoutAuth() {

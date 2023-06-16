@@ -2,11 +2,11 @@ Feature: Movie
 
     Test The One API service calling movie
 
-#    Scenario: User call movie endpoint
-#        Given user call get "movie" endpoint
-#        When response is 200
-#        And list size is 8
-#        Then name is "The Lord of the Rings Series"
+    Scenario: User call movie endpoint
+        Given user call get "movie" endpoint
+        When response is 200
+        And list size is 8
+        Then name is "The Lord of the Rings Series"
 
     Scenario Outline: User call all movie endpoints
         Given user call get "movie" endpoint
